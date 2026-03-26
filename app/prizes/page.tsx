@@ -6,9 +6,9 @@ import { useState } from "react"
 import FadeInView from "@/components/FadeInView"
 
 export default function PrizesPage() {
-	const [expandedCards, setExpandedCards] = useState({})
+	const [expandedCards, setExpandedCards] = useState<Record<number, boolean>>({})
 
-	const toggleCard = (index) => {
+	const toggleCard = (index: number) => {
 		setExpandedCards(prev => ({
 			...prev,
 			[index]: !prev[index]
@@ -164,7 +164,7 @@ Show us how you can innovate with Solana for a chance to win some cool prizes fo
 						</FadeInView>
 					</div>
 
-					<div className="w-[35%] sm:block hidden sm:self-center self-end sm:w-[30%] md:w-[25%] lg:w-[25%] xl:w-[10%]sm:mr-40 md:mr-15 lg:mr-30 xl:mr-40">
+					<div className="w-[35%] sm:block hidden sm:self-center self-end sm:w-[30%] md:w-[25%] lg:w-[25%] xl:w-[10%] sm:mr-40 md:mr-15 lg:mr-30 xl:mr-40">
 						<Image
 							src="/hb4 logo sponserspage.svg"
 							alt="HackByte 4.0 logo"
